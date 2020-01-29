@@ -13,7 +13,7 @@ Nodemon
 Comandos para rodar o projeto:
 yarn -i para instalar as dependências. yarn start ou npx nodemon para iniciar o servidor já com o nodemon
 
-Rotas:
+<h1>Rotas:</h1>
 POST /projects: A rota deve receber title dentro do corpo e cadastrar um novo projeto dentro de um array no seguinte formato: { id: "1", title: 'Novo projeto', tasks: [] }; Certifique-se de enviar o título do projeto no formato string com aspas duplas.
 
 POST /projects/:id/tasks: A rota deve receber um campo title e armazenar uma nova tarefa no array de tarefas de um projeto específico escolhido através do id presente nos parâmetros da rota;
