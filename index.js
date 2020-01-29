@@ -12,9 +12,9 @@ tasks: ["Nova tarefa"]}];
 function checkProjectExist(req, res, next){ 
 
     const {id} = req.params;
-    const project = projects.findIndex(project => project.id == id);
+    const exist = projects.find(project => project.id == id);
     
-    if(!project){
+    if(!exist){
         return res.status(400).json({error: 'ID does not exists'});
     }
 
@@ -64,6 +64,7 @@ server.put('/projects/:id', checkProjectExist , (req, res) => {
     const {title} = req.body;
 
     const project = projects.find(project => project.id == id);
+    
     project.title = title;
     
     return res.json(projects);
